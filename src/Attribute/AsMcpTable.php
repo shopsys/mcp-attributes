@@ -7,6 +7,10 @@ namespace Shopsys\McpAttributes\Attribute;
 use Attribute;
 
 #[Attribute(Attribute::TARGET_CLASS)]
-class AsMcpQueryableEntity
+class AsMcpTable
 {
+    public function __construct(
+        public readonly bool $exposed = true,
+    ) {
+    }
 }
